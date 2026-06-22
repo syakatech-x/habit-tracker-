@@ -1,5 +1,6 @@
 import { useState, useRef } from "react";
 import { useDispatchHabits } from "./habitContext.jsx";
+import "./InputHabit.css";
 
 export function InputBar() {
     const [title, setTitle] = useState("");
@@ -16,9 +17,9 @@ export function InputBar() {
             <button
                 onClick={() => {
                     if (!title) {
-                      alert("Input tidak boleh kosong!");
-                      return;
-                    };
+                        alert("Input tidak boleh kosong!");
+                        return;
+                    }
                     dispatch({
                         type: "added",
                         nextId: ++nextIdRef.current,

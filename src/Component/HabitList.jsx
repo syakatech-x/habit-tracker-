@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { useHabits, useDispatchHabits } from "./habitContext.jsx";
+import "./HabitList.css";
 
 function Habit({ habit }) {
     const [isEdit, setIsEdit] = useState(false);
