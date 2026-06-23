@@ -10,11 +10,13 @@ export function InputBar() {
     return (
         <>
             <input
+                className="inputHabit"
                 placeholder="masukkan habit..."
                 value={title}
                 onChange={e => setTitle(e.target.value)}
             />
             <button
+                className="addBtn"
                 onClick={() => {
                     if (!title) {
                         alert("Input tidak boleh kosong!");
@@ -28,7 +30,7 @@ export function InputBar() {
                     setTitle("");
                 }}
             >
-                Add
+                tambah habit
             </button>
         </>
     );

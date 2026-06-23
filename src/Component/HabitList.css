@@ -1,0 +1,72 @@
+.list-habit {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    flex-wrap: wrap;
+    margin-bottom: 4px;
+    background: transparent;
+    border-radius: 8px;
+    padding: 5px 10px;
+    /* justify-content: space-between; */
+    /* margin-top: 10px; */
+    /* margin-left: -20px; */
+}
+
+.list-habit input[type="checkbox"] {
+    width: 20px;
+    height: 20px;
+    margin-right: 10px;
+    border: 0;
+    outline: 0;
+}
+
+.list-habit input[type="checkbox"],
+.list-habit button {
+    flex-shrink: 0;
+}
+
+.list-habit .habit-text,
+.list-habit input[type="text"] {
+    flex: 1 1 0;
+    min-width: 0;
+    box-sizing: border-box;
+    overflow-wrap: break-word;
+}
+
+.list-habit input[type="text"] {
+    flex: 1 1 200px;
+    min-width: 0;
+    max-width: calc(100% - 140px);
+    width: 100%;
+    padding: 4px 6px;
+}
+
+.edited-btn {
+    text-align: center;
+    width: 60px;
+    background: linear-gradient(130deg, #003fe9, #2661ff);
+    color: #fff;
+    font-size: 14px;
+    font-weight: 600;
+    padding: 5px;
+    border: 0;
+    outline: 0;
+    border-radius: 15px;
+    margin-right: 5px;
+}
+
+.deleted-btn {
+    background: linear-gradient(#f3003c, #ff2a5f);
+    color: #fff;
+    font-size: 14px;
+    font-weight: 600;
+    padding: 5px;
+    border: 0;
+    outline: 0;
+    border-radius: 15px;
+}
+
+.list-habit button:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+}

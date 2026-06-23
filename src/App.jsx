@@ -15,9 +15,13 @@ export default function App() {
         <>
             <HabitsContext value={habits}>
                 <HabitsDispatchContext value={dispatch}>
-                    <h1>Habit Tracker</h1>
-                    <InputBar />
-                    <HabitList />
+                    <div className="app">
+                        <main className="container">
+                            <h1 className="title">Habit Tracker📝</h1>
+                            <InputBar />
+                            <HabitList />
+                        </main>
+                    </div>
                 </HabitsDispatchContext>
             </HabitsContext>
         </>

@@ -21,20 +21,24 @@ function Habit({ habit }) {
                         });
                     }}
                 />
-                <button onClick={() => setIsEdit(false)}>Save</button>
+                <button className="edited-btn" onClick={() => setIsEdit(false)}>
+                    Save
+                </button>
             </>
         );
     } else {
         textContent = (
             <>
-                {habit.title}{" "}
-                <button onClick={() => setIsEdit(true)}>Edit</button>
+                <span className="habit-text">{habit.title} </span>
+                <button className="edited-btn" onClick={() => setIsEdit(true)}>
+                    Edit
+                </button>
             </>
         );
     }
 
     return (
-        <li key={habit.id}>
+        <li key={habit.id} className="list-habit">
             <input
                 type="checkbox"
                 checked={habit.done}
@@ -51,6 +55,7 @@ function Habit({ habit }) {
             />{" "}
             {textContent}
             <button
+                className="deleted-btn"
                 disabled={isEdit}
                 onClick={() =>
                     dispatch({
@@ -59,7 +64,7 @@ function Habit({ habit }) {
                     })
                 }
             >
-                Delete
+                Hapus
             </button>
         </li>
     );
@@ -71,5 +76,5 @@ export function HabitList() {
         return <Habit habit={habit} />;
     });
 
-    return <ul>{listHabit}</ul>;
+    return <ul className="list-container">{listHabit}</ul>;
 }

@@ -1,0 +1,22 @@
+.inputHabit {
+  margin:  12px 0 5px;
+  border-radius: 4px;
+  border: solid 1.5px #aaa;
+  outline: 0;
+  padding: 4px 2px;
+  font-size: 16px;
+}
+
+.addBtn {
+  margin-bottom: 14px;
+  box-sizing: border-box;
+  padding: 4px;
+  font-weight: bold;
+  font-size: 16px;
+  color: #fff;
+  background: linear-gradient(135deg, #5969ff, #253aff);
+  border: none;
+  outline: 0;
+  border-radius: 4px;
+}
+
